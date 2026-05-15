@@ -129,6 +129,7 @@ description: 生成横向翻页网页 PPT（单 HTML 文件），含 WebGL 背�
 - 图片风格必须贴合当前 deck 风格:风格 A 用"电子杂志 × 电子墨水";风格 B 用"瑞士国际主义 / Swiss Style"
 - 信息图、图表、截图再设计里的文字语言必须跟随用户正在使用的语言;中文 deck 用中文,英文 deck 用英文
 - 先看 `references/image-prompts.md` 选择图片类型和基础提示词
+- 如果处理用户原始截图,先看 `references/screenshot-framing.md`:优先程序化做 CleanShot X 式截图适配,只有需要重构信息时才用 GPT-M 2.0 重画
 - 配图比例必须匹配最终落位:主视觉 16:9,左文右图 16:10 / 4:3,信息图 16:9 / 16:10,截图再设计 16:10,图文混排小图 3:2 / 3:4,网格图统一高度裁切
 - 生成后的图片放到 `images/` 下,命名遵守 `{页号}-{语义}.{ext}`
 
@@ -431,6 +432,7 @@ guizang-ppt-skill/
     ├── themes.md             ← 风格 A · 5 套主题色预设（只能选不能自定义）
     ├── themes-swiss.md       ← 风格 B · 4 套瑞士风主题色预设（IKB / 柠檬黄 / 柠檬绿 / 安全橙）
     ├── image-prompts.md      ← GPT-M 2.0 配图类型、比例和基础提示词
+    ├── screenshot-framing.md ← CleanShot X 式截图适配语义
     └── checklist.md          ← 质量检查清单（P0/P1/P2/P3 分级）
 ```
 
@@ -446,7 +448,7 @@ guizang-ppt-skill/
    - 风格 A → `layouts.md`(顶部有 Pre-flight 类名清单、主题节奏规划、动效 recipe 决策树)
    - 风格 B → **先读 `swiss-layout-lock.md`**,再读 `layouts-swiss.md`;正文页必须从 S01-S22 选择,每页写 `data-layout`
 5. 如果风格 B 需要地点、路线、人物住所或城市关系地图,读 `swiss-map-component.md`
-6. 如果在 Codex 中生成配图,读 `image-prompts.md` 挑图片类型、比例和基础提示词
+6. 如果在 Codex 中生成配图,读 `image-prompts.md` 挑图片类型、比例和基础提示词;如果是用户原始截图,先读 `screenshot-framing.md`
 7. 细节调整时读 `components.md` 查组件(含 Motion 动效系统章节,主要服务风格 A;风格 B 的组件细节在 `layouts-swiss.md` 附录)
 8. 生成后先运行 `node scripts/validate-swiss-deck.mjs path/to/index.html`,再读 `checklist.md` 自检
 

@@ -243,6 +243,7 @@ guizang-ppt-skill/
     ├── themes.md         ← 5 theme presets (pick, don't customize)
     ├── themes-swiss.md   ← 4 Swiss anchor-color themes
     ├── image-prompts.md  ← GPT-Image 2.0 / GPT-M 2.0 image types, ratios, and base prompts
+    ├── screenshot-framing.md ← CleanShot X-style screenshot framing semantics
     └── checklist.md      ← quality checklist (P0 / P1 / P2 / P3 tiers)
 ```
 

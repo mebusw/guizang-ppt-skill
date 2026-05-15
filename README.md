@@ -244,6 +244,7 @@ guizang-ppt-skill/
     ├── themes.md         ← 5 套主题色预设(只能选不能自定义)
     ├── themes-swiss.md   ← 4 套瑞士风锚点色
     ├── image-prompts.md  ← GPT-Image 2.0 / GPT-M 2.0 配图类型、比例和基础提示词
+    ├── screenshot-framing.md ← CleanShot X 式截图适配语义
     └── checklist.md      ← 质量检查清单(P0 / P1 / P2 / P3 分级)
 ```
 
